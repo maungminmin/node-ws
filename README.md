@@ -31,5 +31,6 @@ https://你的域名/你的uuid
   | AUTO_ACCESS  | 否 |  true  | 是否开启自动访问保活,false为关闭,true为开启,需同时填写DOMAIN变量 |
 
 
-* js混肴地址：https://obfuscator.io
+* js混肴地址：https://obfuscator.io  
 
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
