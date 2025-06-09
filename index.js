@@ -6,14 +6,14 @@ const net = require('net');
 const { Buffer } = require('buffer');
 const { exec, execSync } = require('child_process');
 const { WebSocket, createWebSocketStream } = require('ws');
-const UUID = process.env.UUID || '#UUID#'; // 运行哪吒v1,在不同的平台需要改UUID,否则会被覆盖
-const NEZHA_SERVER = process.env.NEZHA_SERVER || '';       // 哪吒v1填写形式：nz.abc.com:8008   哪吒v0填写形式：nz.abc.com
-const NEZHA_PORT = process.env.NEZHA_PORT || '';           // 哪吒v1没有此变量，v0的agent端口为{443,8443,2096,2087,2083,2053}其中之一时开启tls
-const NEZHA_KEY = process.env.NEZHA_KEY || '';             // v1的NZ_CLIENT_SECRET或v0的agent端口                
-const DOMAIN = process.env.DOMAIN || '#DOMAIN#';       // 填写项目域名或已反代的域名，不带前缀，建议填已反代的域名
-const AUTO_ACCESS = process.env.AUTO_ACCESS || true;      // 是否开启自动访问保活,false为关闭,true为开启,需同时填写DOMAIN变量
-const NAME = process.env.NAME || 'Vls';                    // 节点名称
-const PORT = process.env.PORT || #PORT#;                     // http和ws服务端口
+const UUID = process.env.UUID || '#UUID#'; // Run Nezha v1, you need to change the UUID on different platforms, otherwise it will be overwritten
+const NEZHA_SERVER = process.env.NEZHA_SERVER || ''; // Nezha v1 fill in the form: nz.abc.com:8008 Nezha v0 fill in the form: nz.abc.com
+const NEZHA_PORT = process.env.NEZHA_PORT || ''; // Nezha v1 does not have this variable, v0 agent port is one of {443,8443,2096,2087,2083,2053} to open tls
+const NEZHA_KEY = process.env.NEZHA_KEY || ''; //  NZ_CLIENT_SECRET of v1 or agent port of v0 
+const DOMAIN = process.env.DOMAIN || '#DOMAIN#'; // Fill in the project domain name or the reversed domain name without a prefix. It is recommended to fill in the reversed domain name
+const AUTO_ACCESS = process.env.AUTO_ACCESS || true; // Whether to enable automatic access to keep alive, false is off, true is on, and the DOMAIN variable must be filled in at the same time
+const NAME = process.env.NAME || 'Vls'; // Node name
+const PORT = process.env.PORT || #PORT#; // http and ws service ports                     // http and ws service port
 
 let ISP = '';
 const fetchMetaInfo = async () => {
